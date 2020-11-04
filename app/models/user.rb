@@ -1,8 +1,4 @@
 class User < ApplicationRecord
-  def new
-    @user = User.new
-  end
-  
-  def create
-  end
+  validates :name, presence: true
+  validates :email, presence: true
 end
