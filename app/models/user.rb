@@ -5,4 +5,8 @@ class User < ApplicationRecord
   validates :password, format: {with:/[0-9a-z]+/}
   validates :email, format: {with:/[0-9a-zA-Z]+@[a-z]+.[a-z]+/}
   has_secure_password
+  
+  has_many :topics
+  has_many :favorites
+  has_many :favorite_topics, through: :favorites, source: 'topic'
 end
