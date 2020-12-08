@@ -1,0 +1,14 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @comments.each do |comment| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2>コメント</h2>
+            <%= comment%>
+          </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

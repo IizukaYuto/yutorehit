@@ -14,5 +14,9 @@ Rails.application.routes.draw do
   
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
+  delete '/favorites/destroy', to: 'favorites#destroy'
 
+  get 'comments/index'
+  get 'comments/new'
+  post '/comments', to: 'comments#create'
 end

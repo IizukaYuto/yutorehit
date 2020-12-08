@@ -1,0 +1,25 @@
+<div class="topic-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="clo-md-6 col-md-offset-3">
+        <% if logged_in? %>
+          <h1 class="text-center">Add comment</h1>
+          <%= form_for @comment do |c| %>
+          <%= c.hidden_field :topic_id, :value => @comment.topic_id %>
+            
+            <!--コメント投稿機能-->
+            <div class="form-group">
+              <%= c.label :body %>
+              <%= c.text_area :body, class: 'form-control' %>
+            </div>
+            
+            <!--投稿ボタン-->
+            <%= c.submit '投稿', class: 'btn btn-black btn-block' %>
+            
+          <% end %>
+       
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
