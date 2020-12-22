@@ -69,3 +69,9 @@ gem "carrierwave"
 group :production do
   gem 'pg'
 end
+
+group :development, :test do
+    gem 'dotenv-rails'
+end
+
+gem 'fog-aws'
